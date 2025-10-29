@@ -2,8 +2,6 @@
 
 A modern, responsive portfolio website built with Next.js 15, showcasing my projects, achievements, and professional experience as a Software Engineering student and Full-Stack Developer.
 
-![Portfolio Preview](public/images/avatar.jpg)
-
 ## 🚀 Features
 
 - **Modern Tech Stack**: Built with Next.js 15, React 19, and TypeScript
