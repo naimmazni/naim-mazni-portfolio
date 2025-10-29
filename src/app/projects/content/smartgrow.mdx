@@ -1,0 +1,155 @@
+---
+title: "SmartGrow"
+publishedAt: "2025-08-11"
+summary: "An intelligent IoT farming assistant that combines ESP32 sensors, Flutter mobile app, and AI-powered insights to help farmers optimize crop growth."
+images:
+  - "/images/projects/smartgrow.png"
+team:
+  - name: "Muhammad Naim"
+    role: "Team Lead"
+    avatar: "/images/avatar.jpg"
+    linkedIn: "https://www.linkedin.com/in/muhammad-naim-mazni"
+github: "https://github.com/naimmazni/smartgrow"
+tags:
+  - Flutter
+  - ESP32
+  - Gemini API
+  - AWS IoT
+---
+
+## Overview
+
+SmartGrow is an innovative IoT-based farming solution that empowers farmers with real-time environmental monitoring and AI-driven agricultural insights. The system integrates hardware sensors, mobile application, and cloud services to optimize crop growth and improve farming efficiency.
+
+## Key Features
+
+### 🌱 Real-Time Environmental Monitoring
+
+- Soil moisture levels
+- Temperature and humidity tracking
+- Light intensity measurement
+- pH level monitoring
+- Automated data collection every 5 minutes
+
+### 📱 Mobile Application
+
+- Live sensor data visualization
+- Historical data trends and graphs
+- Push notifications for critical alerts
+- Remote monitoring from anywhere
+- Multi-farm management support
+
+### 🤖 AI-Powered Insights
+
+- Gemini API integration for intelligent recommendations
+- Crop-specific growth advice
+- Disease detection and prevention
+- Optimal watering schedule suggestions
+- Fertilizer recommendations
+
+### ⚡ Smart Automation
+
+- Automatic irrigation control
+- Scheduled watering based on soil moisture
+- Alert system for abnormal conditions
+- Energy-efficient operation
+- Remote control capabilities
+
+## Technical Architecture
+
+### Hardware Layer
+
+**ESP32 Microcontroller**
+
+- WiFi connectivity for data transmission
+- Multiple sensor inputs
+- Low power consumption
+- Reliable outdoor operation
+
+**Sensor Array**
+
+- Capacitive soil moisture sensor
+- DHT22 temperature/humidity sensor
+- BH1750 light sensor
+- pH sensor module
+- Water level sensor
+
+### Mobile Application
+
+Built with Flutter for cross-platform deployment:
+
+- Beautiful, intuitive UI
+- Real-time data updates
+- Offline data caching
+- Charts and data visualization
+- Multi-language support
+
+### Cloud Infrastructure
+
+**AWS IoT Core**
+
+- Secure device connectivity
+- Real-time message routing
+- Device shadow for state management
+- Data storage in DynamoDB
+- Lambda functions for processing
+
+### AI Integration
+
+**Gemini API** provides:
+
+- Natural language insights
+- Context-aware recommendations
+- Image-based plant health analysis
+- Predictive analytics for yield
+- Personalized farming tips
+
+## System Workflow
+
+1. **Data Collection**: ESP32 sensors gather environmental data
+2. **Transmission**: Data sent to AWS IoT Core via MQTT
+3. **Processing**: Lambda functions process and store data
+4. **Analysis**: Gemini API analyzes patterns and generates insights
+5. **Visualization**: Flutter app displays data and recommendations
+6. **Action**: Automated responses or farmer-triggered controls
+
+## Impact & Benefits
+
+### For Small-Scale Farmers
+
+- Reduce water waste by 40%
+- Improve crop yields by 25%
+- Save time on manual monitoring
+- Make data-driven decisions
+
+### Environmental Benefits
+
+- Optimized water usage
+- Reduced fertilizer waste
+- Lower carbon footprint
+- Sustainable farming practices
+
+## Deployment & Setup
+
+The system is designed for easy deployment:
+
+1. Install ESP32 and sensors in field
+2. Configure WiFi and AWS credentials
+3. Download mobile app
+4. Pair device with app
+5. Start monitoring immediately
+
+## Awards & Recognition
+
+- Gold Medal - UiTM International Innovation Carnival 2023
+- Featured in IoT competition
+- Recognition for sustainability impact
+
+## Future Enhancements
+
+- Solar power integration
+- Multi-crop support
+- Weather forecast integration
+- Drone imagery analysis
+- Marketplace for farmers
+- Community knowledge sharing
