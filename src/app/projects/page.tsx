@@ -4,7 +4,7 @@ import { Projects } from "@/components/work/Projects";
 
 export async function generateMetadata() {
   return Meta.generate({
-    title: work.title,
+    title: `Projects - ${person.name}`,
     description: work.description,
     baseURL: baseURL,
     image: `/api/og/generate?title=${encodeURIComponent(work.title)}`,

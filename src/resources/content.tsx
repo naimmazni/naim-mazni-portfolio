@@ -6,7 +6,7 @@ const person: Person = {
   lastName: "Naim",
   name: `Muhammad Naim Mazni`,
   role: "Software Engineering Student & Full-Stack Developer",
-  avatar: "/images/avatar.jpg",
+  avatar: "/images/avatar.png",
   email: "naimmazni@gmail.com",
   location: "Asia/Kuala_Lumpur",
   languages: ["English", "Malay"],
@@ -145,7 +145,7 @@ const about: About = {
         timeframe: "June 2025",
         role: "Smart Agriculture App Development",
         achievements: [
-          "🥉 2nd Runner Up - Smart Agriculture App with Soil Monitoring & AI Pest Detection|/images/achievements/hackathons/foseal-hackathon-certificate.pdf",
+          "🥉 2nd Runner Up - Smart Agriculture App with Soil Monitoring & AI Pest Detection|/images/achievements/hackathons/foseal-2025/foseal-hackathon-certificate.pdf",
         ],
         images: [
           {
@@ -220,7 +220,7 @@ const about: About = {
         timeframe: "September 2025",
         role: "AI Legal Assistant Development",
         achievements: [
-          "💡 Participant - AI Legal Assistant at ASEAN's Biggest AI Hackathon|/images/achievements/hackathons/aws-great-ai-hackathon-certificate.png",
+          "💡 Participant - AI Legal Assistant at ASEAN's Biggest AI Hackathon|/images/achievements/hackathons/great-ai-2025/aws-great-ai-hackathon-certificate.png",
         ],
         images: [
           {
@@ -258,16 +258,16 @@ const about: About = {
         timeframe: "2019 - 2021",
         role: "Mathematics & Innovation Excellence",
         achievements: [
-          "🥉 Bronze Medal - Singapore International Math Olympiad Challenge (SIMOC) 2021 - Individual Math Olympiad|/images/achievements/certificates/international/simoc-math-olympiad-certificate.pdf",
-          "🥈 Silver Medal - SIMOC 2021 - Team Mind Sports|/images/achievements/certificates/international/simoc-mind-sports-certificate.pdf",
-          "📜 Certificate - SIMOC 2021 - Team Math Master Mind|/images/achievements/certificates/international/simoc-math-master-mind-certificate.pdf",
-          "🥉 Bronze Medal - Singapore and Asian Schools Math Olympiad (SASMO) 2021|/images/achievements/certificates/international/sasmo-certificate.pdf",
-          "📜 Exemplary Certificate - Singapore Math Global Finals 2021|/images/achievements/certificates/international/singa-certificate.jpg",
+          "🥉 Bronze Medal - Singapore International Math Olympiad Challenge (SIMOC) 2021 - Individual Math Olympiad|/images/achievements/certificates/international/simoc-2021/simoc-math-olympiad-certificate.pdf",
+          "🥈 Silver Medal - SIMOC 2021 - Team Mind Sports|/images/achievements/certificates/international/simoc-2021/simoc-mind-sports-certificate.pdf",
+          "📜 Certificate - SIMOC 2021 - Team Math Master Mind|/images/achievements/certificates/international/simoc-2021/simoc-math-master-mind-certificate.pdf",
+          "🥉 Bronze Medal - Singapore and Asian Schools Math Olympiad (SASMO) 2021|/images/achievements/certificates/international/sasmo-2021/sasmo-certificate.pdf",
+          "📜 Exemplary Certificate - Singapore Math Global Finals 2021|/images/achievements/certificates/international/singa-2021/singa-certificate.jpg",
           "📜 Certificate - DELF A1 French Language Test 2019",
         ],
         images: [
           {
-            src: "/images/achievements/certificates/international/simoc-math-olympiad-picture.jpg",
+            src: "/images/achievements/certificates/international/simoc-2021/simoc-math-olympiad-picture.jpg",
             alt: "SIMOC 2021 - Math Olympiad Team Photo",
             width: 16,
             height: 9,
@@ -275,16 +275,78 @@ const about: About = {
         ],
       },
       {
-        company: "National Competitions (Malaysia)",
-        timeframe: "2020 - 2023",
-        role: "Innovation & STEM Excellence",
+        company: "Pre-University Matriculation Innovation Competition (PIITRAM) 2023",
+        timeframe: "2023",
+        role: "Innovation Project",
         achievements: [
-          "🥇 Gold Medal - Pre-University Matriculation Innovation Competition (PIITRAM) 2023|/images/achievements/certificates/national/piitram-2023-certificate.pdf",
-          "🥇 Gold Medal - Creations de UiTM International Mega Innovation Carnival 2023|/images/achievements/certificates/national/creations-de-uitm-certificate.pdf",
-          "🥈 Silver Medal - IoT Poster Competition 2020|/images/achievements/certificates/national/iot-poster-certificate.jpg",
-          "🥉 3rd Place - Arduino Showcase UiTM|/images/achievements/certificates/national/arduino-showcase-certificate.pdf",
-          "🏅 Honorable Mention - Kangaroo Math Competition 2021|/images/achievements/certificates/national/kmc-2021-certificate.pdf",
-          "🏅 Honorable Mention - Beaver Computational Competition 2020|/images/achievements/certificates/national/beaver-2020-certificate.pdf",
+          "🥇 Gold Medal - Pre-University Matriculation Innovation Competition (PIITRAM) 2023|/images/achievements/certificates/national/piitram-2023/piitram-2023-certificate.pdf",
+        ],
+        images: [
+          {
+            src: "/images/achievements/certificates/national/piitram-2023/piitram-2023-picture-1.jpg",
+            alt: "PIITRAM 2023 - Gold Medal Achievement",
+            width: 16,
+            height: 9,
+          },
+          {
+            src: "/images/achievements/certificates/national/piitram-2023/piitram-2023-picture-2.jpg",
+            alt: "PIITRAM 2023 - Innovation Project Showcase",
+            width: 16,
+            height: 9,
+          },
+        ],
+      },
+      {
+        company: "Creations de UiTM International Mega Innovation Carnival 2023",
+        timeframe: "2023",
+        role: "Innovation Competition",
+        achievements: [
+          "🥇 Gold Medal - Creations de UiTM International Mega Innovation Carnival 2023|/images/achievements/certificates/national/creations-de-uitm-2023/creations-de-uitm-certificate.pdf",
+        ],
+        images: [],
+      },
+      {
+        company: "Arduino Showcase UiTM",
+        timeframe: "2023",
+        role: "IoT Project Competition",
+        achievements: [
+          "🥉 3rd Place - Arduino Showcase UiTM|/images/achievements/certificates/national/arduino-showcase/arduino-showcase-certificate.pdf",
+        ],
+        images: [
+          {
+            src: "/images/achievements/certificates/national/arduino-showcase/arduino-showcase-picture-1.jpg",
+            alt: "Arduino Showcase UiTM - Project Display",
+            width: 16,
+            height: 9,
+          },
+          {
+            src: "/images/achievements/certificates/national/arduino-showcase/arduino-showcase-picture-2.jpg",
+            alt: "Arduino Showcase UiTM - Team Presentation",
+            width: 16,
+            height: 9,
+          },
+          {
+            src: "/images/achievements/certificates/national/arduino-showcase/arduino-showcase-picture-3.jpg",
+            alt: "Arduino Showcase UiTM - Technical Demo",
+            width: 16,
+            height: 9,
+          },
+          {
+            src: "/images/achievements/certificates/national/arduino-showcase/arduino-showcase-picture-4.jpg",
+            alt: "Arduino Showcase UiTM - Award Ceremony",
+            width: 16,
+            height: 9,
+          },
+        ],
+      },
+      {
+        company: "Mathematics & STEM Competitions",
+        timeframe: "2020 - 2021",
+        role: "National Competitions",
+        achievements: [
+          "🥈 Silver Medal - IoT Poster Competition 2020|/images/achievements/certificates/national/iot-poster-2020/iot-poster-certificate.jpg",
+          "🏅 Honorable Mention - Kangaroo Math Competition 2021|/images/achievements/certificates/national/kmc-2021/kmc-2021-certificate.pdf",
+          "🏅 Honorable Mention - Beaver Computational Competition 2020|/images/achievements/certificates/national/beaver-2020/beaver-2020-certificate.pdf",
         ],
         images: [],
       },

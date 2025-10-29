@@ -14,7 +14,7 @@ import { baseURL, about, person } from "@/resources";
 
 export async function generateMetadata() {
   return Meta.generate({
-    title: "Achievements | " + person.name,
+    title: `Achievements - ${person.name}`,
     description: "International and national awards, competitions, and academic achievements.",
     baseURL: baseURL,
     image: `/api/og/generate?title=Achievements`,
@@ -327,95 +327,90 @@ export default function Achievements() {
       )}
 
       {/* National Achievements */}
-      {about.work.experiences[8] && (
-        <Column fillWidth gap="32" marginBottom="64">
-          <Column gap="16">
-            <Row gap="12" vertical="center">
-              <Icon name="trophy" size="l" onBackground="brand-strong" />
-              <Heading as="h2" variant="display-strong-m">
-                National Competitions (Malaysia)
-              </Heading>
-            </Row>
-            <Text variant="body-default-m" onBackground="neutral-weak">
-              {about.work.experiences[8].timeframe} • {about.work.experiences[8].role}
-            </Text>
-          </Column>
-
-          <Column gap="20" paddingLeft="l">
-            {about.work.experiences[8].achievements.map((achievement, index) => {
-              const achievementText = achievement?.toString() || "";
-              const [text, certificateLink] = achievementText.split("|");
-              
-              return (
-                <Row key={index} gap="16" vertical="start">
-                  <Text variant="heading-default-l" style={{ minWidth: "24px" }}>
-                    •
-                  </Text>
-                  {certificateLink ? (
-                    <a
-                      href={certificateLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      style={{
-                        textDecoration: "none",
-                        color: "inherit",
-                        cursor: "pointer",
-                        borderBottom: "1px dashed var(--neutral-border-medium)",
-                        transition: "all 0.2s",
-                      }}
-                    >
-                      <Text variant="body-default-l">
-                        {text} 📄
-                      </Text>
-                    </a>
-                  ) : (
-                    <Text variant="body-default-l">{text}</Text>
-                  )}
-                </Row>
-              );
-            })}
-          </Column>
-
-          {/* Image Gallery for National */}
-          {about.work.experiences[8].images && about.work.experiences[8].images.length > 0 && (
-            <Grid
-              columns="3"
-              m={{ columns: "2" }}
-              s={{ columns: "1" }}
-              gap="12"
-              fillWidth
-              marginTop="16"
-              paddingLeft="l"
-            >
-              {about.work.experiences[8].images.map((image, imgIndex) => (
-                <Media
-                  key={imgIndex}
-                  src={image.src}
-                  alt={image.alt}
-                  aspectRatio={`${image.width}/${image.height}`}
-                  radius="l"
-                  border="neutral-medium"
-                />
-              ))}
-            </Grid>
-          )}
+      <Column fillWidth gap="32" marginBottom="64">
+        <Column gap="16">
+          <Row gap="12" vertical="center">
+            <Icon name="trophy" size="l" onBackground="brand-strong" />
+            <Heading as="h2" variant="display-strong-m">
+              National Competitions (Malaysia)
+            </Heading>
+          </Row>
+          <Text variant="body-default-m" onBackground="neutral-weak">
+            2020 - 2023 • Innovation & STEM Excellence
+          </Text>
         </Column>
-      )}
 
-      {/* Achievement Categories */}
-      <Column fillWidth gap="32" marginBottom="40">
-        <Heading as="h2" variant="display-strong-m">
-          Categories
-        </Heading>
-        <Row wrap gap="12">
-          <Tag size="l" prefixIcon="trophy">Academic Excellence</Tag>
-          <Tag size="l" prefixIcon="code">Hackathons</Tag>
-          <Tag size="l" prefixIcon="lightbulb">Innovation</Tag>
-          <Tag size="l" prefixIcon="calculator">Mathematics Olympiad</Tag>
-          <Tag size="l" prefixIcon="cpu">STEM Excellence</Tag>
-          <Tag size="l" prefixIcon="globe">International</Tag>
-        </Row>
+        {/* Individual National Competitions */}
+        <Column fillWidth gap="48" paddingLeft="l">
+          {about.work.experiences.slice(8).map((competition, index) => (
+            <Column key={index} fillWidth gap="16">
+              <Column gap="12">
+                <Text variant="heading-strong-l">{competition.company}</Text>
+                <Text variant="body-default-s" onBackground="neutral-weak">
+                  {competition.timeframe} • {competition.role}
+                </Text>
+              </Column>
+
+              {competition.achievements.map((achievement, achIndex) => {
+                const achievementText = achievement?.toString() || "";
+                const [text, certificateLink] = achievementText.split("|");
+                
+                return (
+                  <Row key={achIndex} gap="16" vertical="start">
+                    <Text variant="heading-default-l" style={{ minWidth: "24px" }}>
+                      •
+                    </Text>
+                    {certificateLink ? (
+                      <a
+                        href={certificateLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        style={{
+                          textDecoration: "none",
+                          color: "inherit",
+                          cursor: "pointer",
+                          borderBottom: "1px dashed var(--neutral-border-medium)",
+                          transition: "all 0.2s",
+                        }}
+                      >
+                        <Text variant="body-default-l">
+                          {text} 📄
+                        </Text>
+                      </a>
+                    ) : (
+                      <Text variant="body-default-l">{text}</Text>
+                    )}
+                  </Row>
+                );
+              })}
+
+              {/* Image Gallery for this competition */}
+              {competition.images && competition.images.length > 0 && (
+                <Grid
+                  columns="3"
+                  m={{ columns: "2" }}
+                  s={{ columns: "1" }}
+                  gap="12"
+                  fillWidth
+                  marginTop="16"
+                >
+                  {competition.images.map((image, imgIndex) => (
+                    <Media
+                      key={imgIndex}
+                      src={image.src}
+                      alt={image.alt}
+                      aspectRatio={`${image.width}/${image.height}`}
+                      radius="l"
+                      border="neutral-medium"
+                    />
+                  ))}
+                </Grid>
+              )}
+            </Column>
+          ))}
+        </Column>
       </Column>
+
     </Column>
   );
 }

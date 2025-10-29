@@ -1,0 +1,150 @@
+---
+title: "Azrina Mahdi Workshop Management System"
+publishedAt: "2025-10-15"
+summary: "A comprehensive workshop management system built with Laravel 12, featuring workshop registration, payment processing with Billplz, and an administrative dashboard for managing workshops and registrations."
+images:
+  - "/images/projects/azrina-mahdi/thumbnail.png"
+team:
+  - name: "Muhammad Naim Mazni"
+    role: "Full-Stack Developer"
+    avatar: "/images/avatar.png"
+    linkedIn: "https://www.linkedin.com/in/muhammad-naim-mazni/"
+link: "https://azrinamahdi.com/"
+github: ""
+tags:
+  - "Laravel"
+  - "PHP"
+  - "Tailwind CSS"
+  - "Alpine.js"
+  - "MySQL"
+  - "Billplz"
+---
+
+## Overview
+
+The Azrina Mahdi Workshop Management System is a full-featured web application designed to streamline workshop operations from registration to payment processing. Built with Laravel 12 and modern frontend technologies, it provides both public-facing workshop listings and a comprehensive administrative dashboard for managing all aspects of workshops, registrations, and payments.
+
+## Problem
+
+Workshop organizers face challenges in managing multiple aspects of their business: tracking registrations, processing payments, scheduling workshop dates, monitoring capacity, and maintaining clear communication with participants. Manual management of these tasks is time-consuming, error-prone, and makes it difficult to scale operations or gain insights into business performance.
+
+## Solution
+
+This system provides an end-to-end solution that automates workshop management workflows. Participants can easily browse and register for workshops online, while administrators have access to a powerful dashboard with analytics, real-time notifications, and comprehensive management tools. The integrated Billplz payment gateway ensures secure and reliable payment processing with automatic confirmation.
+
+## Key Features
+
+### Public Features
+
+- **Workshop Listing**: Browse available workshops with detailed information
+- **Workshop Registration**: User-friendly registration form for participants
+- **Payment Integration**: Secure payment processing with Billplz gateway
+- **Email Notifications**: Automated confirmation emails upon registration
+- **Workshop Calendar**: Visual calendar view of workshop dates and availability
+
+### Admin Features
+
+- **Dashboard Analytics**: Comprehensive overview with charts and key metrics
+- **Workshop Management**: Create, edit, and manage workshops with images and pricing
+- **Date Management**: Schedule and manage multiple dates per workshop
+- **Registration Management**: View, filter, and export registration data
+- **Payment Tracking**: Monitor and update payment statuses in real-time
+- **Notification System**: Real-time notification center for admin activities
+- **PDF Export**: Generate and download registration reports
+
+## Technologies Used
+
+- **Backend**: Laravel 12.x (PHP 8.2+) - Modern PHP framework for robust web applications
+- **Frontend**: Tailwind CSS 3.x, Alpine.js 3.x - Utility-first CSS and reactive JavaScript
+- **Database**: MySQL/MariaDB - Reliable relational database management
+- **Authentication**: Laravel Breeze - Simple authentication scaffolding
+- **PDF Generation**: DomPDF - Generate professional PDF reports
+- **Charts**: Chart.js 4.x - Interactive data visualizations
+- **Build Tool**: Vite 7.x - Fast frontend build tool
+- **Email**: Laravel Mail with SMTP - Automated email notifications
+- **Payment Gateway**: Billplz - Malaysian payment processing integration
+- **Testing**: PestPHP - Modern PHP testing framework
+
+## System Architecture
+
+The application follows Laravel's MVC architecture:
+
+- **Frontend Layer**: Blade templates with Tailwind CSS and Alpine.js for interactivity
+- **Application Layer**: Laravel controllers handling business logic and routing
+- **Database Layer**: Eloquent ORM for database interactions with MySQL
+- **External Services**: Billplz API for payment processing, SMTP for emails
+- **Asset Pipeline**: Vite for optimized asset compilation and hot module replacement
+
+## Technical Highlights
+
+### Workshop Management
+
+- Complete CRUD operations for workshops with image upload
+- Set capacity, pricing, duration, and active/inactive status
+- Support for multiple workshop dates with individual availability tracking
+- Track participant count per date with automatic capacity enforcement
+
+### Registration System
+
+- Public registration form with comprehensive validation
+- Email and phone number validation
+- Workshop date selection with real-time availability
+- Participant information collection and storage
+
+### Payment Processing
+
+- Billplz payment gateway integration for secure transactions
+- Payment callback handling for automatic status updates
+- Payment status tracking (pending, paid, failed)
+- Automatic payment confirmation and email notifications
+
+### Notification System
+
+- Real-time notifications for administrators
+- Notification types: new registration, payment received, system alerts
+- Mark as read/unread functionality
+- Bulk actions for notification management
+
+### Analytics & Reporting
+
+- Dashboard with key business metrics and trends
+- Chart.js visualizations for revenue and registration data
+- Advanced filtering for registration lists
+- PDF export functionality for reports and participant lists
+
+## Development Best Practices
+
+- **Laravel 12 Features**: Utilized latest Laravel features and conventions
+- **Security**: Form validation, CSRF protection, and secure authentication
+- **Database Optimization**: Efficient queries and proper indexing
+- **Responsive Design**: Mobile-first approach with Tailwind CSS
+- **Code Quality**: Clean, maintainable code following Laravel best practices
+- **Testing**: PestPHP test suite for critical functionality
+- **Version Control**: Proper Git workflow with meaningful commits
+
+## Impact
+
+The system streamlines workshop operations by automating registration and payment processes, reducing administrative overhead by approximately 60%. Real-time analytics provide valuable insights for business decisions, while automated email notifications improve communication with participants. The integrated payment system ensures reliable transaction processing with automatic confirmation.
+
+## Development Challenges
+
+- Implementing secure Billplz payment callback handling
+- Designing an intuitive admin dashboard with comprehensive analytics
+- Managing workshop capacity and date availability in real-time
+- Creating a responsive design that works seamlessly across devices
+- Optimizing database queries for performance with growing data
+
+## Future Enhancements
+
+- **Multi-language Support**: Add support for multiple languages
+- **Advanced Analytics**: Deeper insights with more chart types and metrics
+- **Mobile App**: Native mobile application for administrators
+- **Certificate Generation**: Automatic certificate creation for participants
+- **Email Marketing**: Integration with email marketing tools
+- **SMS Notifications**: Add SMS alerts for important updates
+- **Waitlist Management**: Automated waitlist for fully booked workshops
+- **Review System**: Allow participants to rate and review workshops
+
+## Live Website
+
+Visit the live application at [azrinamahdi.com](https://azrinamahdi.com/) to see the system in action.
