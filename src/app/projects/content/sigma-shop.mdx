@@ -1,0 +1,198 @@
+---
+title: "Sigma Shop"
+publishedAt: "2025-06-23"
+summary: "A modern, full-featured e-commerce platform built with Laravel 12, featuring a responsive design, comprehensive admin dashboard, and seamless shopping experience."
+images:
+  - "/images/projects/sigma-shop/thumbnail.png"
+team:
+  - name: "Muhammad Naim"
+    role: "Full-Stack Developer"
+    avatar: "/images/avatar.png"
+    linkedIn: "https://www.linkedin.com/in/muhammad-naim-mazni/"
+  - name: "Hazriq Haykal"
+    role: "Business Expert"
+    avatar: "/images/avatar-hazriq.png"
+    linkedIn: "https://www.linkedin.com/in/hazriq-haykal-251a32294/"
+link: ""
+github: "https://github.com/naimmazni/sigma_ecommerce_web"
+tags:
+  - name: "Laravel"
+    icon: "laravel"
+  - name: "PHP"
+    icon: "php"
+  - name: "MySQL"
+    icon: "mysql"
+  - name: "Tailwind CSS"
+    icon: "tailwind"
+---
+
+## Overview
+
+Sigma Shop is a comprehensive e-commerce platform built with Laravel 12, designed to provide a seamless shopping experience for customers and powerful management tools for administrators. The platform features a modern, responsive design with complete product management, order processing, and customer relationship capabilities.
+
+## Problem
+
+Small to medium-sized businesses need an affordable, feature-rich e-commerce solution that's easy to deploy and manage. Many existing platforms are either too complex, too expensive, or lack essential features for both customers and administrators.
+
+## Solution
+
+Sigma Shop provides a complete e-commerce solution with an intuitive customer interface and comprehensive admin dashboard. Built with Laravel and modern web technologies, it offers all essential e-commerce features while maintaining simplicity and ease of use.
+
+## Key Features
+
+### 🛍️ Customer Features
+
+- **User Authentication**: Secure registration, login, and password reset functionality
+- **Product Browsing**: Browse products with advanced search and filtering options
+- **Shopping Cart**: Dynamic cart with real-time updates for adding, updating, and removing items
+- **Order Management**: Place orders and track order status in real-time
+- **User Profile**: Manage personal information and view complete order history
+- **Interactive Contact Form**: Send inquiries with clickable contact information
+
+### 👨‍💼 Admin Features
+
+- **Dashboard Analytics**: Overview of sales performance, orders, and product statistics
+- **Product Management**: Complete CRUD operations for products with featured status control
+- **Order Management**: View, update, and track order statuses
+- **Contact Management**: Handle and respond to customer inquiries
+- **User Management**: Monitor and manage customer accounts
+
+### ⚙️ Technical Features
+
+- **Responsive Design**: Mobile-first approach using Tailwind CSS
+- **Real-time Updates**: Dynamic cart and order status updates
+- **File Upload**: Secure product image management system
+- **Database Seeding**: Pre-configured sample data for testing
+- **Security**: CSRF protection, input validation, and secure authentication
+
+## Technologies Used
+
+- **Laravel 12**: Modern PHP framework for robust backend development
+- **PHP 8.2+**: Latest PHP features for optimal performance
+- **MySQL**: Reliable relational database management
+- **Tailwind CSS**: Utility-first CSS framework for responsive design
+- **Blade Templates**: Laravel's powerful templating engine
+- **Font Awesome**: Beautiful icons throughout the application
+
+## System Architecture
+
+The platform follows Laravel's MVC architecture:
+
+- **Models**: Eloquent ORM for database interactions (Product, Order, User, Contact)
+- **Controllers**: Separated into Admin and Customer controllers for clean code organization
+- **Views**: Blade templates with reusable components
+- **Middleware**: Custom authentication and authorization middleware
+- **Routes**: RESTful routing for clean URL structure
+
+## Key Implementations
+
+### Shopping Cart System
+
+- Persistent cart functionality across sessions
+- Real-time quantity updates without page reload
+- Automatic price calculations
+- Seamless checkout process
+
+### Admin Dashboard
+
+- Comprehensive analytics and reporting
+- Product management with image upload
+- Order tracking with status updates
+- Featured product toggle functionality
+- Contact inquiry management system
+
+### Interactive Contact Page
+
+- Form validation for data integrity
+- Clickable contact information:
+  - Address opens Google Maps
+  - Phone number uses tel: protocol for direct calling
+  - Email uses mailto: protocol for instant email composition
+
+## Security Features
+
+- CSRF protection on all forms
+- Input validation and sanitization
+- Password hashing with bcrypt
+- Authentication middleware for protected routes
+- XSS protection through Blade templating
+- SQL injection prevention via Eloquent ORM
+
+## Default Access Credentials
+
+### Admin Account
+
+- Email: admin@sigma.com
+- Password: admin123
+
+### Customer Account
+
+- Email: test@example.com
+- Password: password
+
+## Technical Highlights
+
+- Clean and maintainable code structure
+- Database migrations for version control
+- Seeders for quick development setup
+- Storage link for file uploads
+- Environment-based configuration
+- Composer for dependency management
+- Node.js and npm for asset compilation
+
+## Development Features
+
+- Easy customization with Tailwind CSS
+- Modular component structure
+- Database seeding for testing
+- Clear separation of concerns
+- RESTful API design
+- Comprehensive error handling
+
+## Project Structure
+
+```
+├── app/
+│   ├── Http/Controllers/
+│   │   ├── Admin/          # Admin-specific controllers
+│   │   ├── Auth/           # Authentication controllers
+│   │   └── Customer/       # Customer-facing controllers
+│   ├── Models/             # Eloquent models
+│   └── Middleware/         # Custom middleware
+├── database/
+│   ├── migrations/         # Database schema
+│   └── seeders/           # Sample data
+├── resources/
+│   ├── views/             # Blade templates
+│   └── css/               # Stylesheets
+└── routes/
+    └── web.php            # Application routes
+```
+
+## Deployment
+
+Built for easy deployment on:
+
+- Shared hosting with PHP support
+- VPS with XAMPP or LAMP stack
+- Cloud platforms (AWS, DigitalOcean, etc.)
+- Local development with Laravel Sail
+
+## Future Enhancements
+
+- Payment gateway integration (Stripe, PayPal)
+- Product reviews and ratings system
+- Wishlist functionality
+- Advanced analytics dashboard
+- Email notifications for orders
+- Multi-language support
+- Product variants (size, color)
+- Inventory management system
+- Coupon and discount codes
+- Social media integration
+
+## Contact Information
+
+- **Email**: info@sigmashop.com
+- **Phone**: +60 12-345 6789
+- **Address**: 123 Sigma Street, Kuala Lumpur, Malaysia
