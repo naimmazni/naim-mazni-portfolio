@@ -10,7 +10,6 @@ import {
   Row,
   Icon,
 } from "@once-ui-system/core";
-import { supabase } from "@/utils/supabaseClient";
 
 interface ContactFormData {
   name: string;
@@ -35,19 +34,19 @@ export function ContactForm() {
     setErrorMessage("");
 
     try {
-      const { error } = await supabase
-        .from("contact_submissions")
-        .insert([
-          {
-            name: formData.name,
-            email: formData.email,
-            subject: formData.subject,
-            message: formData.message,
-            created_at: new Date().toISOString(),
-          },
-        ]);
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
 
-      if (error) throw error;
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || "Failed to send message");
+      }
 
       setStatus("success");
       setFormData({ name: "", email: "", subject: "", message: "" });
