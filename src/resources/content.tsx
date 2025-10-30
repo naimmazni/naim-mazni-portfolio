@@ -328,12 +328,6 @@ const about: About = {
             width: 16,
             height: 9,
           },
-          {
-            src: "/images/achievements/certificates/national/arduino-showcase/arduino-showcase-picture-4.jpg",
-            alt: "Arduino Showcase UiTM - Award Ceremony",
-            width: 16,
-            height: 9,
-          },
         ],
       },
       {
