@@ -395,10 +395,10 @@ const about: About = {
           </>
         ),
         tags: [
-          { name: "React" },
-          { name: "Next.js" },
-          { name: "Laravel" },
-          { name: "Node.js" },
+          { name: "React", icon: "react" },
+          { name: "Next.js", icon: "nextjs" },
+          { name: "Laravel", icon: "laravel" },
+          { name: "Node.js", icon: "nodejs" },
         ],
         images: [],
       },
@@ -411,8 +411,8 @@ const about: About = {
           </>
         ),
         tags: [
-          { name: "Flutter" },
-          { name: "Java" },
+          { name: "Flutter", icon: "flutter" },
+          { name: "Java", icon: "java" },
         ],
         images: [],
       },
@@ -425,9 +425,9 @@ const about: About = {
           </>
         ),
         tags: [
-          { name: "MySQL" },
-          { name: "PHP" },
-          { name: "Node.js" },
+          { name: "MySQL", icon: "mysql" },
+          { name: "PHP", icon: "php" },
+          { name: "Node.js", icon: "nodejs" },
         ],
         images: [],
       },
@@ -440,9 +440,9 @@ const about: About = {
           </>
         ),
         tags: [
-          { name: "Java" },
-          { name: "JavaScript" },
-          { name: "HTML/CSS" },
+          { name: "Java", icon: "java" },
+          { name: "JavaScript", icon: "javascript" },
+          { name: "HTML/CSS", icon: "html" },
         ],
         images: [],
       },

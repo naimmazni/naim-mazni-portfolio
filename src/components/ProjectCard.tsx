@@ -20,7 +20,7 @@ interface ProjectCardProps {
   description: string;
   avatars: { src: string }[];
   link: string;
-  tags?: string[];
+  tags?: (string | { name: string; icon?: string })[];
   publishedAt?: string;
   role?: string;
 }
@@ -124,11 +124,15 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
           {/* Tags */}
           {tags && tags.length > 0 && (
             <Row wrap gap="8">
-              {tags.slice(0, 3).map((tag, index) => (
-                <Tag key={index} size="s">
-                  {tag}
-                </Tag>
-              ))}
+              {tags.slice(0, 3).map((tag, index) => {
+                const tagName = typeof tag === 'string' ? tag : tag.name;
+                const tagIcon = typeof tag === 'object' && tag.icon ? tag.icon : undefined;
+                return (
+                  <Tag key={index} size="s" prefixIcon={tagIcon}>
+                    {tagName}
+                  </Tag>
+                );
+              })}
               {tags.length > 3 && (
                 <Tag size="s" onBackground="neutral-weak">
                   +{tags.length - 3}

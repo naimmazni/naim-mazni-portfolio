@@ -118,11 +118,15 @@ export default async function Project({
         {/* Technology Tags */}
         {post.metadata.tags && post.metadata.tags.length > 0 && (
           <Row wrap gap="8" horizontal="center" marginTop="16">
-            {post.metadata.tags.map((tag, index) => (
-              <Tag key={index} size="l">
-                {tag}
-              </Tag>
-            ))}
+            {post.metadata.tags.map((tag, index) => {
+              const tagName = typeof tag === 'string' ? tag : tag.name;
+              const tagIcon = typeof tag === 'object' && tag.icon ? tag.icon : undefined;
+              return (
+                <Tag key={index} size="l" prefixIcon={tagIcon}>
+                  {tagName}
+                </Tag>
+              );
+            })}
           </Row>
         )}
       </Column>

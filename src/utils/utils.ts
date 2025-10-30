@@ -16,7 +16,7 @@ type Metadata = {
   image?: string;
   images: string[];
   tag?: string;
-  tags?: string[];
+  tags?: (string | { name: string; icon?: string })[];
   team: Team[];
   link?: string;
   github?: string;
