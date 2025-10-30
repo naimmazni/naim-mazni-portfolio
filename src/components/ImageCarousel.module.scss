@@ -1,0 +1,110 @@
+.carouselContainer {
+  position: relative;
+  width: 100%;
+}
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.leftArrow,
+.rightArrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.imageWrapper:hover .leftArrow,
+.imageWrapper:hover .rightArrow {
+  opacity: 1;
+}
+
+.leftArrow {
+  left: 16px;
+}
+
+.rightArrow {
+  right: 16px;
+}
+
+.counter {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  z-index: 10;
+  backdrop-filter: blur(8px);
+}
+
+.thumbnail {
+  width: 80px;
+  height: 60px;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+  background: transparent;
+  padding: 0;
+  
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  &:hover {
+    transform: scale(1.05);
+    border-color: var(--brand-on-background-medium);
+  }
+}
+
+.activeThumbnail {
+  border-color: var(--brand-on-background-strong);
+  transform: scale(1.05);
+}
+
+// Keyboard navigation focus styles
+.thumbnail:focus-visible {
+  outline: 2px solid var(--brand-on-background-strong);
+  outline-offset: 2px;
+}
+
+// Mobile responsiveness
+@media (max-width: 768px) {
+  .leftArrow,
+  .rightArrow {
+    opacity: 1;
+  }
+
+  .leftArrow {
+    left: 8px;
+  }
+
+  .rightArrow {
+    right: 8px;
+  }
+
+  .counter {
+    bottom: 12px;
+    right: 12px;
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+
+  .thumbnail {
+    width: 60px;
+    height: 45px;
+  }
+}

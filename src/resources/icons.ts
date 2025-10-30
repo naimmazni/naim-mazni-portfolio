@@ -13,6 +13,8 @@ import {
   HiOutlineGlobeAsiaAustralia,
   HiOutlineRocketLaunch,
   HiArrowDownTray,
+  HiChevronLeft,
+  HiChevronRight,
 } from "react-icons/hi2";
 
 import {
@@ -92,6 +94,8 @@ export const iconLibrary: Record<string, IconType> = {
   document: HiOutlineDocument,
   rocket: HiOutlineRocketLaunch,
   download: HiArrowDownTray,
+  chevronLeft: HiChevronLeft,
+  chevronRight: HiChevronRight,
   javascript: SiJavascript,
   nextjs: SiNextdotjs,
   supabase: SiSupabase,
