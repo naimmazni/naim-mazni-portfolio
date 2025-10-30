@@ -11,7 +11,7 @@ import { ContactForm } from "@/components/ContactForm";
 const contact = {
   path: "/contact",
   label: "Contact",
-  title: `Contact – ${person.name}`,
+  title: `Contact - ${person.name}`,
   description: `Get in touch with ${person.name}. Open to internship opportunities and software engineering roles.`,
 };
 
@@ -52,8 +52,7 @@ export default function Contact() {
             wrap="balance"
             style={{ textAlign: 'center' }}
           >
-            I'm currently open to internship opportunities and software engineering roles.
-            Feel free to reach out!
+            I'm currently open to internship opportunities and software engineering roles. Feel free to reach out!
           </Text>
         </Column>
 

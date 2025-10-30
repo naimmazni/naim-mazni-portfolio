@@ -172,7 +172,7 @@ export function ContactForm() {
         >
           <Icon name="checkCircle" size="m" onBackground="success-strong" />
           <Text variant="body-default-s" onBackground="success-strong">
-            Message sent successfully! I'll get back to you soon.
+            Message sent successfully! I have received it via email and will reply to you soon.
           </Text>
         </Row>
       )}
