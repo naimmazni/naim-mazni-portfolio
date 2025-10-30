@@ -32,12 +32,13 @@ import {
   SiSupabase,
 } from "react-icons/si";
 
-import { FaDiscord, FaGithub, FaLinkedin, FaX, FaThreads, FaXTwitter, FaFacebook, FaPinterest, FaWhatsapp, FaReddit, FaTelegram, } from "react-icons/fa6";
+import { FaDiscord, FaGithub, FaLinkedin, FaX, FaThreads, FaXTwitter, FaFacebook, FaPinterest, FaWhatsapp, FaReddit, FaTelegram, FaEnvelope, } from "react-icons/fa6";
 
 export const iconLibrary: Record<string, IconType> = {
   arrowUpRight: HiArrowUpRight,
   arrowRight: HiArrowRight,
-  email: PiEnvelopeDuotone,
+  email: FaEnvelope,
+  envelope: PiEnvelopeDuotone,
   globe: HiOutlineGlobeAsiaAustralia,
   person: PiUserCircleDuotone,
   grid: PiGridFourDuotone,
