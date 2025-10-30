@@ -58,12 +58,9 @@ const home: Home = {
   },
   subline: (
     <>
-      I'm Naim, a 4th semester Software Engineering student at Universiti Putra Malaysia (UPM) with a CGPA of 4.00 
-      (Vice Chancellor's Award recipient). Award-winning developer with 25+ achievements including hackathon wins, 
-      academic honors, and international competitions.
-      <br />
-      I specialize in Java, Flutter, Laravel, React, and Node.js — building everything from AI-powered agriculture 
-      solutions to fintech platforms and campus utilities.
+      Hi, I'm Naim, a third-year Software Engineering (Hons.) student at Universiti Putra Malaysia (UPM).
+      I'm passionate about exploring AI tools and emerging technologies, always eager to learn and apply new innovations.
+      I'm currently seeking internship opportunities to gain real-world experience and strengthen my technical and problem-solving skills.
     </>
   ),
 };
@@ -71,7 +68,7 @@ const home: Home = {
 const about: About = {
   path: "/about",
   label: "About",
-  title: `About – ${person.name}`,
+  title: `About - ${person.name}`,
   description: `Meet ${person.name}, ${person.role} from ${person.location}`,
   tableOfContent: {
     display: true,
@@ -454,21 +451,7 @@ const work: Work = {
   path: "/projects",
   label: "Projects",
   title: "Featured Projects",
-  description: `A collection of web and mobile projects built by ${person.name}.`,
-};
-
-const gallery: Gallery = {
-  path: "/gallery",
-  label: "Gallery",
-  title: `Photo Gallery – ${person.name}`,
-  description: `A personal collection of travel and tech photography by ${person.name}.`,
-  images: [
-    { src: "/images/gallery/horizontal-1.jpg", alt: "image", orientation: "horizontal" },
-    { src: "/images/gallery/vertical-1.jpg", alt: "image", orientation: "vertical" },
-    { src: "/images/gallery/horizontal-2.jpg", alt: "image", orientation: "horizontal" },
-    { src: "/images/gallery/vertical-2.jpg", alt: "image", orientation: "vertical" },
-    { src: "/images/gallery/horizontal-3.jpg", alt: "image", orientation: "horizontal" },
-  ],
+  description: `A collection of web and mobile projects.`,
 };
 
 const contact = {
@@ -478,4 +461,4 @@ const contact = {
   description: `Get in touch with ${person.name}. Open to internship opportunities and software engineering roles.`,
 };
 
-export { person, social, newsletter, home, about, work, gallery, contact };
+export { person, social, newsletter, home, about, work, contact };
