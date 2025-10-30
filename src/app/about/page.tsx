@@ -241,97 +241,38 @@ export default function About() {
             </Column>
           )}
 
-          {/* Achievements Preview with Link */}
-          <Column fillWidth gap="24" marginBottom="64">
-            <Line fillWidth marginBottom="24" />
-            <Row fillWidth horizontal="between" vertical="center">
-              <Heading as="h2" variant="display-strong-m">
-                Achievements & Recognition
-              </Heading>
-              <Button
-                href="/achievements"
-                suffixIcon="arrowRight"
-                label="View All"
-                size="m"
-                variant="secondary"
-              />
-            </Row>
-            <Text variant="body-default-l" onBackground="neutral-weak">
-              12+ international and national awards including Gold and Silver medals in Mathematics Olympiads, Innovation Competitions, and STEM Excellence.
-            </Text>
-            <Row gap="16" wrap>
-              <Column border="neutral-medium" radius="m" padding="16" gap="8" style={{ minWidth: "150px" }}>
-                <Text variant="heading-strong-l">🥇 5</Text>
-                <Text variant="body-default-s" onBackground="neutral-weak">Gold/Silver Medals</Text>
-              </Column>
-              <Column border="neutral-medium" radius="m" padding="16" gap="8" style={{ minWidth: "150px" }}>
-                <Text variant="heading-strong-l">🌍 2</Text>
-                <Text variant="body-default-s" onBackground="neutral-weak">International</Text>
-              </Column>
-              <Column border="neutral-medium" radius="m" padding="16" gap="8" style={{ minWidth: "150px" }}>
-                <Text variant="heading-strong-l">🇲🇾 10+</Text>
-                <Text variant="body-default-s" onBackground="neutral-weak">National Awards</Text>
-              </Column>
-            </Row>
-          </Column>
-
-          {about.work.display && false && (
+          {about.work.display && (
             <>
               <Line fillWidth marginBottom="48" />
-              <Heading as="h2" id={about.work.title} variant="display-strong-m" marginBottom="24">
-                {about.work.title}
-              </Heading>
-              <Column fillWidth gap="32" marginBottom="64">
-                {about.work.experiences.map((experience, index) => (
-                  <Column key={`${experience.company}-${experience.role}-${index}`} fillWidth>
-                    <Row fillWidth horizontal="between" vertical="end" marginBottom="4">
-                      <Text id={experience.company} variant="heading-strong-l">
-                        {experience.company}
-                      </Text>
-                      <Text variant="heading-default-xs" onBackground="neutral-weak">
-                        {experience.timeframe}
-                      </Text>
-                    </Row>
-                    <Text variant="body-default-s" onBackground="brand-weak" marginBottom="m">
-                      {experience.role}
-                    </Text>
-                    <Column as="ul" gap="16">
-                      {experience.achievements.map(
-                        (achievement: React.ReactNode, index: number) => (
-                          <Text
-                            as="li"
-                            variant="body-default-m"
-                            key={`${experience.company}-${index}`}
-                          >
-                            {achievement}
-                          </Text>
-                        ),
-                      )}
-                    </Column>
-                    {experience.images && experience.images.length > 0 && (
-                      <Row fillWidth paddingTop="m" paddingLeft="40" gap="12" wrap>
-                        {experience.images.map((image, index) => (
-                          <Row
-                            key={index}
-                            border="neutral-medium"
-                            radius="m"
-                            minWidth={image.width}
-                            height={image.height}
-                          >
-                            <Media
-                              enlarge
-                              radius="m"
-                              sizes={image.width.toString()}
-                              alt={image.alt}
-                              src={image.src}
-                            />
-                          </Row>
-                        ))}
-                      </Row>
-                    )}
-                  </Column>
-                ))}
-              </Column>
+              <Row fillWidth horizontal="between" vertical="center" marginBottom="24">
+                <Heading as="h2" id={about.work.title} variant="display-strong-m">
+                  {about.work.title}
+                </Heading>
+                <Button
+                  href="/achievements"
+                  suffixIcon="arrowRight"
+                  label="View All"
+                  size="m"
+                  variant="secondary"
+                />
+              </Row>
+              <Text variant="body-default-l" onBackground="neutral-weak" marginBottom="24">
+                12+ international and national awards including Gold and Silver medals in Mathematics Olympiads, Innovation Competitions, and STEM Excellence.
+              </Text>
+              <Row gap="16" wrap marginBottom="32">
+                <Column border="neutral-medium" radius="m" padding="16" gap="8" style={{ minWidth: "150px" }}>
+                  <Text variant="heading-strong-l">🥇 5</Text>
+                  <Text variant="body-default-s" onBackground="neutral-weak">Gold/Silver Medals</Text>
+                </Column>
+                <Column border="neutral-medium" radius="m" padding="16" gap="8" style={{ minWidth: "150px" }}>
+                  <Text variant="heading-strong-l">🌍 2</Text>
+                  <Text variant="body-default-s" onBackground="neutral-weak">International</Text>
+                </Column>
+                <Column border="neutral-medium" radius="m" padding="16" gap="8" style={{ minWidth: "150px" }}>
+                  <Text variant="heading-strong-l">🇲🇾 10+</Text>
+                  <Text variant="body-default-s" onBackground="neutral-weak">National Awards</Text>
+                </Column>
+              </Row>
             </>
           )}
 
