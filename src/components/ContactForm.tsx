@@ -85,6 +85,36 @@ export function ContactForm() {
         </Text>
       </Column>
 
+      {status === "success" && (
+        <Row
+          padding="12"
+          radius="m"
+          background="success-alpha-weak"
+          gap="8"
+          vertical="center"
+        >
+          <Icon name="checkCircle" size="m" onBackground="success-strong" />
+          <Text variant="body-default-s" onBackground="success-strong">
+            Message sent successfully! I have received it via email and will reply to you soon.
+          </Text>
+        </Row>
+      )}
+
+      {status === "error" && (
+        <Row
+          padding="12"
+          radius="m"
+          background="danger-alpha-weak"
+          gap="8"
+          vertical="center"
+        >
+          <Icon name="alertCircle" size="m" onBackground="danger-strong" />
+          <Text variant="body-default-s" onBackground="danger-strong">
+            {errorMessage}
+          </Text>
+        </Row>
+      )}
+
       <Column gap="m">
         <Column gap="8">
           <Text variant="label-default-s" onBackground="neutral-strong">
@@ -161,36 +191,6 @@ export function ContactForm() {
           />
         </Column>
       </Column>
-
-      {status === "success" && (
-        <Row
-          padding="12"
-          radius="m"
-          background="success-alpha-weak"
-          gap="8"
-          vertical="center"
-        >
-          <Icon name="checkCircle" size="m" onBackground="success-strong" />
-          <Text variant="body-default-s" onBackground="success-strong">
-            Message sent successfully! I have received it via email and will reply to you soon.
-          </Text>
-        </Row>
-      )}
-
-      {status === "error" && (
-        <Row
-          padding="12"
-          radius="m"
-          background="danger-alpha-weak"
-          gap="8"
-          vertical="center"
-        >
-          <Icon name="alertCircle" size="m" onBackground="danger-strong" />
-          <Text variant="body-default-s" onBackground="danger-strong">
-            {errorMessage}
-          </Text>
-        </Row>
-      )}
 
       <Button
         type="submit"
