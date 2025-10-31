@@ -79,7 +79,8 @@ const about: About = {
   },
   calendar: {
     display: true,
-    link: "https://cal.com",
+    link: "naimmazni/30min",
+    namespace: "30min",
   },
   intro: {
     display: true,

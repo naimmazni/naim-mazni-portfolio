@@ -15,6 +15,7 @@ import {
 } from "@once-ui-system/core";
 import { baseURL, about, person, social } from "@/resources";
 import TableOfContents from "@/components/about/TableOfContents";
+import CalendarButton from "@/components/CalendarButton";
 import styles from "@/components/about/about.module.scss";
 import React from "react";
 
@@ -127,29 +128,10 @@ export default function About() {
             marginBottom="32"
           >
             {about.calendar.display && (
-              <Row
-                fitWidth
-                border="brand-alpha-medium"
-                background="brand-alpha-weak"
-                radius="full"
-                padding="4"
-                gap="8"
-                marginBottom="m"
-                vertical="center"
-                className={styles.blockAlign}
-                style={{
-                  backdropFilter: "blur(var(--static-space-1))",
-                }}
-              >
-                <Icon paddingLeft="12" name="calendar" onBackground="brand-weak" />
-                <Row paddingX="8">Schedule a call</Row>
-                <IconButton
-                  href={about.calendar.link}
-                  data-border="rounded"
-                  variant="secondary"
-                  icon="chevronRight"
-                />
-              </Row>
+              <CalendarButton 
+                calLink={about.calendar.link}
+                namespace={about.calendar.namespace}
+              />
             )}
             <Heading className={styles.textAlign} variant="display-strong-xl">
               {person.name}

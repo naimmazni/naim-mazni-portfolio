@@ -122,8 +122,10 @@ export interface About extends BasePageConfig {
   calendar: {
     /** Whether to display the calendar */
     display: boolean;
-    /** Link to the calendar */
+    /** Cal.com booking link (e.g., "naimmazni/30min") */
     link: string;
+    /** Cal.com namespace for the embed */
+    namespace?: string;
   };
   /** Introduction section */
   intro: {
