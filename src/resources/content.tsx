@@ -86,12 +86,11 @@ const about: About = {
     title: "Introduction",
     description: (
       <>
-        Muhammad Naim Mazni is a dedicated Software Engineering student at Universiti Putra Malaysia (UPM), currently in his 4th semester with an outstanding CGPA of 4.00. 
-        He is a two-time Vice Chancellor's Award recipient (2023, 2025) and three-time Dean's List honoree, demonstrating consistent academic excellence.
+        I am a passionate Software Engineering student at Universiti Putra Malaysia, specializing in full-stack development. My technical skills include Java, Flutter, Laravel, Node.js, and React. I enjoy building creative digital solutions that enhance everyday life.
         <br /><br />
-        With expertise in Java, Flutter, Laravel, React, and Node.js, Naim specializes in building innovative solutions across web, mobile, and IoT platforms. 
-        His passion for technology is reflected in his impressive portfolio of 25+ achievements, including hackathon wins, academic honors, and international competition medals. 
-        From AI-powered agriculture apps to fintech solutions, Naim transforms complex problems into elegant, practical software that makes a real-world impact.
+        Throughout my academic journey, I have developed various applications such as a E-Invoice Workshop Management System and several website app such as E-Commerce Website. These projects highlight my ability to merge technical expertise with innovative thinking. I continuously seek challenges that allow me to grow and expand my capabilities.
+        <br /><br />
+        Outside of coding, I am an active runner and enjoy engaging with community. I believe in lifelong learning, continuous improvement, and the power of technology to make meaningful change. My goal is to contribute to impactful projects while becoming a well-rounded software engineer.
       </>
     ),
   },
