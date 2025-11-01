@@ -1,6 +1,12 @@
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
+import { teamMembers } from "@/data/team-members";
+
+type TeamReference = {
+  id: string;
+  role: string;
+};
 
 type Team = {
   name: string;
@@ -40,6 +46,21 @@ function readMDXFile(filePath: string) {
   const rawContent = fs.readFileSync(filePath, "utf-8");
   const { data, content } = matter(rawContent);
 
+  // Process team references to full team member data
+  const teamData: Team[] = (data.team || []).map((teamRef: TeamReference) => {
+    const member = teamMembers[teamRef.id];
+    if (member) {
+      return {
+        name: member.name,
+        role: teamRef.role,
+        avatar: member.avatar,
+        linkedIn: member.linkedIn,
+      };
+    }
+    // Fallback for legacy format or invalid IDs
+    return teamRef as unknown as Team;
+  });
+
   const metadata: Metadata = {
     title: data.title || "",
     publishedAt: data.publishedAt,
@@ -48,7 +69,7 @@ function readMDXFile(filePath: string) {
     images: data.images || [],
     tag: data.tag || [],
     tags: data.tags || [],
-    team: data.team || [],
+    team: teamData,
     link: data.link || "",
     github: data.github || "",
   };
