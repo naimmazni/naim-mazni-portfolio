@@ -45,13 +45,33 @@ export async function generateMetadata({
 
   if (!post) return {};
 
-  return Meta.generate({
+  const metadata = Meta.generate({
     title: post.metadata.title,
     description: post.metadata.summary,
     baseURL: baseURL,
     image: post.metadata.image || `/api/og/generate?title=${post.metadata.title}`,
     path: `${work.path}/${post.slug}`,
   });
+
+  return {
+    ...metadata,
+    keywords: [
+      post.metadata.title,
+      ...(post.metadata.tag ? [post.metadata.tag] : []),
+      'Project',
+      'Portfolio',
+      person.name,
+      'Case Study',
+    ],
+    authors: [{ name: person.name }],
+    twitter: {
+      card: 'summary_large_image',
+      title: post.metadata.title,
+      description: post.metadata.summary,
+      creator: '@naimmazni',
+      images: [post.metadata.image || `/api/og/generate?title=${post.metadata.title}`],
+    },
+  };
 }
 
 export default async function Project({

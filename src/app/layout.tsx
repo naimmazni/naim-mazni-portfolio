@@ -14,16 +14,46 @@ import {
   SpacingToken,
 } from "@once-ui-system/core";
 import { Footer, Header, RouteGuard, Providers } from "@/components";
-import { baseURL, effects, fonts, style, dataStyle, home } from "@/resources";
+import { baseURL, effects, fonts, style, dataStyle, home, person, social } from "@/resources";
 
 export async function generateMetadata() {
-  return Meta.generate({
+  const metadata = Meta.generate({
     title: home.title,
     description: home.description,
     baseURL: baseURL,
     path: home.path,
     image: home.image,
   });
+
+  return {
+    ...metadata,
+    keywords: [
+      'Muhammad Naim Mazni',
+      'Software Engineer',
+      'Full-Stack Developer',
+      'Web Development',
+      'Mobile Development',
+      'React',
+      'Next.js',
+      'Flutter',
+      'Laravel',
+      'Node.js',
+      'UPM Student',
+      'Malaysia Developer',
+      'Portfolio',
+      'Internship',
+    ],
+    authors: [{ name: person.name, url: baseURL }],
+    creator: person.name,
+    publisher: person.name,
+    twitter: {
+      card: 'summary_large_image',
+      title: home.title,
+      description: home.description,
+      creator: '@naimmazni',
+      images: [home.image],
+    },
+  };
 }
 
 export default async function RootLayout({
@@ -45,6 +75,39 @@ export default async function RootLayout({
       )}
     >
       <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'Person',
+              name: person.name,
+              url: baseURL,
+              image: `${baseURL}${person.avatar}`,
+              jobTitle: person.role,
+              email: person.email,
+              sameAs: [
+                social.find(s => s.name === 'GitHub')?.link,
+                social.find(s => s.name === 'LinkedIn')?.link,
+              ].filter(Boolean),
+              alumniOf: {
+                '@type': 'Organization',
+                name: 'Universiti Putra Malaysia',
+              },
+              knowsAbout: [
+                'Software Engineering',
+                'Full-Stack Development',
+                'Web Development',
+                'Mobile Development',
+                'React',
+                'Next.js',
+                'Flutter',
+                'Laravel',
+                'Node.js',
+              ],
+            }),
+          }}
+        />
         <script
           id="theme-init"
           dangerouslySetInnerHTML={{
