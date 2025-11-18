@@ -16,30 +16,12 @@ const contact = {
 };
 
 export async function generateMetadata() {
-  const metadata = Meta.generate({
+  return Meta.generate({
     title: contact.title,
     description: contact.description,
     baseURL: baseURL,
     path: contact.path,
   });
-
-  return {
-    ...metadata,
-    keywords: [
-      'Contact Muhammad Naim',
-      'Hire Software Engineer',
-      'Internship Opportunity',
-      'Full-Stack Developer Contact',
-      'Collaboration',
-      'Software Engineering Jobs',
-    ],
-    twitter: {
-      card: 'summary',
-      title: contact.title,
-      description: contact.description,
-      creator: '@naimmazni',
-    },
-  };
 }
 
 export default function Contact() {

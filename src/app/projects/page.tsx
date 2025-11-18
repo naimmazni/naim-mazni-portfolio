@@ -3,36 +3,13 @@ import { baseURL, about, person, work } from "@/resources";
 import { Projects } from "@/components/work/Projects";
 
 export async function generateMetadata() {
-  const metadata = Meta.generate({
+  return Meta.generate({
     title: `Projects - ${person.name}`,
     description: work.description,
     baseURL: baseURL,
     image: `/api/og/generate?title=${encodeURIComponent(work.title)}`,
     path: work.path,
   });
-
-  return {
-    ...metadata,
-    keywords: [
-      'Portfolio Projects',
-      'Web Development Projects',
-      'Mobile Apps',
-      'ChiliCare',
-      'SmartGrow',
-      'Justice AI',
-      'Full-Stack Projects',
-      'React Projects',
-      'Flutter Apps',
-      'Next.js Projects',
-    ],
-    twitter: {
-      card: 'summary_large_image',
-      title: `Projects - ${person.name}`,
-      description: work.description,
-      creator: '@naimmazni',
-      images: [`/api/og/generate?title=${encodeURIComponent(work.title)}`],
-    },
-  };
 }
 
 export default function Work() {

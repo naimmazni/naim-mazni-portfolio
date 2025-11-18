@@ -20,36 +20,13 @@ import styles from "@/components/about/about.module.scss";
 import React from "react";
 
 export async function generateMetadata() {
-  const metadata = Meta.generate({
+  return Meta.generate({
     title: about.title,
     description: about.description,
     baseURL: baseURL,
     image: `/api/og/generate?title=${encodeURIComponent(about.title)}`,
     path: about.path,
   });
-
-  return {
-    ...metadata,
-    keywords: [
-      'About Muhammad Naim',
-      'Software Engineering Student',
-      'UPM',
-      'Universiti Putra Malaysia',
-      'Full-Stack Developer',
-      'Career',
-      'Achievements',
-      'Dean\'s List',
-      'Vice Chancellor Award',
-      'Hackathon Winner',
-    ],
-    twitter: {
-      card: 'summary_large_image',
-      title: about.title,
-      description: about.description,
-      creator: '@naimmazni',
-      images: [`/api/og/generate?title=${encodeURIComponent(about.title)}`],
-    },
-  };
 }
 
 export default function About() {
