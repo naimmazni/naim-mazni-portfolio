@@ -124,7 +124,7 @@ export default function Home() {
             <Row gap="32" wrap horizontal="center" s={{ gap: "16" }}>
               <Column gap="4" align="center" minWidth="80">
                 <Heading variant="display-strong-l" onBackground="brand-strong">
-                  3.946
+                  3.96
                 </Heading>
                 <Text variant="body-default-s" onBackground="neutral-weak">
                   CGPA
